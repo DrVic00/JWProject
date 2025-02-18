@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jurassic World Park</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="style_main.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-dark">
+    <div class="container">
+        <a class="navbar-brand" href="#">
+            <img src="logo.png" alt="Jurassic World Logo" class="logo" width="120">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link" href="#section1">Welcome</a></li>
+                <li class="nav-item"><a class="nav-link" href="#section2">About</a></li>
+                <li class="nav-item"><a class="nav-link" href="#section3">Tickets</a></li>
+                <li class="nav-item"><a class="nav-link" href="#section4">Statistics</a></li>
+                <li class="nav-item"><a class="nav-link" href="#section5">Jobs</a></li>
+                <li class="nav-item"><a class="nav-link" href="#section6">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+    <ol class="carousel-indicators">
+      <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+      <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+      <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+    </ol>
+    <div class="carousel-inner">
+      <div class="item active">
+        <img class="d-block w-100" src="jw3.jpg" alt="First slide">
+      </div>
+      <div class="item">
+        <img class="d-block w-100" src="jw2.jpg" alt="Second slide">
+      </div>
+      <div class="item">
+        <img class="d-block w-100" src="jw5.jpg" alt="Third slide">
+      </div>
+    </div>
+    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+
+<section id="sectionBreak" class="section bg-primary p-5">
+</section>
+
+<section id="section1" class="section" style="background-image: url(background1.jpg); background-repeat: no-repeat; background-size: 2500px auto;">
+    <div class="container text-center">
+        <h1>Welcome to Jurassic World!</h1>
+        <p>The adventure of a lifetime awaits you beyond the gates.</p>
+    </div>
+</section>
+
+<section id="section2" class="section">
+    <div class="container">
+        <div class="section-header">
+            <h2>About the Park</h2>
+            <p>Experience a world of wonder and science as we bring dinosaurs back to life.</p>
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+                <img src="dinosaur1.png" alt="Dinosaur" class="img-fluid">
+                <p>Join our thrilling tours and meet the giants of the past.</p>
+            </div>
+            <div class="col-md-4">
+                <img src="map.jpg" alt="Park Map" class="img-fluid">
+                <p>Plan your visit with our interactive map.</p>
+            </div>
+            <div class="col-md-4">
+                <img src="dinosaur2.jpg" alt="Dinosaur" class="img-fluid">
+                <p>Explore our state-of-the-art facilities and exhibits.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="sectionBreak" class="section bg-primary p-5">
+</section>
+
+<section id="section3" class="section bg-light">
+    <div class="container">
+        <div class="section-header">
+            <h2>Check Ticket Availability</h2>
+        </div>
+        <form id="ticket-form">
+            <div class="mb-3">
+                <label for="date" class="form-label">Choose a Date:</label>
+                <input type="date" id="date" class="form-control">
+            </div>
+            <div class="mb-3">
+                <label for="guests" class="form-label">Number of Guests:</label>
+                <input type="number" id="guests" class="form-control">
+            </div>
+            <button type="submit" class="btn btn-primary">Check Availability</button>
+        </form>
+
+        <!-- Alert -->
+        <div id="availability-alert" class="alert d-none mt-3" role="alert"></div>
+    </div>
+</section>
+
+<section id="section4" class="section bg-primary">
+    <div class="container">
+        <div class="section-header">
+            <h2>Park Statistics</h2>
+        </div>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Year</th>
+                    <th>Visitors</th>
+                    <th>Dinosaurs</th>
+                    <th>Exhibits</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>2024</td>
+                    <td>1,300,000</td>
+                    <td>54</td>
+                    <td>23</td>
+                </tr>
+                <tr>
+                    <td>2023</td>
+                    <td>1,000,000</td>
+                    <td>50</td>
+                    <td>20</td>
+                </tr>
+                <tr>
+                    <td>2022</td>
+                    <td>900,000</td>
+                    <td>48</td>
+                    <td>18</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</section>
+
+<section id="section5" class="section bg-light">
+    <div class="container">
+        <div class="section-header">
+            <h2>Join Our Team</h2>
+        </div>
+        <p>Work with us at the cutting edge of science and adventure.</p>
+        <form id="job-form">
+            <div class="mb-3">
+                <label for="position" class="form-label">Choose Position:</label>
+                <select id="position" class="form-select">
+                    <option>Scientist</option>
+                    <option>Tour Guide</option>
+                    <option>Technician</option>
+                </select>
+            </div>
+            <div class="mb-3">
+                <label for="resume" class="form-label">Upload Resume:</label>
+                <input type="file" id="resume" class="form-control">
+            </div>
+            <button type="submit" class="btn btn-outline-success">Apply Now</button>
+        </form>
+
+        <!-- Alert -->
+        <div id="success-alert" class="alert alert-success mt-3 d-none" role="alert">
+            Congratulations! Your application has been submitted successfully.
+        </div>
+    </div>
+</section>
+
+<section id="section6" class="section" style="background-image: url(footer-img.png); background-repeat: no-repeat; background-size: 2500px auto;">
+    <div class="container">
+        <div class="section-header ">
+            <h2><b>Contact Us</b></h2>
+        </div>
+        <h3><b>For any inquiries, please contact us:</b></h3>
+        <h3><b>Phone: 123-456-7890</b></h3>
+        <h3><b>Email: info@jurassicworld.com</b></h3>
+    </div>
+</section>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+
+<script>
+    document.getElementById("job-form").addEventListener("submit", function (event) {
+        event.preventDefault();
+        const alert = document.getElementById("success-alert");
+        alert.classList.remove("d-none");
+    });
+
+    document.getElementById("ticket-form").addEventListener("submit", function (event) {
+        event.preventDefault();
+
+        const alert = document.getElementById("availability-alert");
+        const isPlaceToVisit = Math.random() < 0.7;
+
+        if (isPlaceToVisit) {
+            alert.className = "alert alert-success mt-3";
+            alert.textContent = "Great news! It is a wonderful day to visit the park.";
+        } else {
+            alert.className = "alert alert-warning mt-3";
+            alert.textContent = "Unfortunately, today isn't the best day to visit the park.";
+        }
+
+        alert.classList.remove("d-none");
+    });
+</script>
